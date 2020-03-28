@@ -34,9 +34,9 @@
         </div>
    
     </body>
-    <script src='/socket.io/socket.io.js'></script>
+    <script src='http://chatpii.herokuapp.com/socket.io/socket.io.js'></script>
     <script>
-       var socket = io.connect()
+       var socket = io.connect('http://chatpii.herokuapp.com')
        $(()=>{
        
         $('#btn').click(() =>{
@@ -50,14 +50,14 @@
             $('#displayMsg').append(`<h3> ${message.name} </h3>  ${message.message} <br>`)
         }
         function getMessage(){
-            $.get('http://localhost:3000/vinay',(data)=>{
+            $.get('http://chatpii.herokuapp.com/vinay',(data)=>{
             console.log(data)
             data.forEach(addMsg)
 
             })
         }
         function postMsg(message){
-            $.post('http://localhost:3000/vinay',message)
+            $.post('http://chatpii.herokuapp.com/vinay',message)
           
         }
 
