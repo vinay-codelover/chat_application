@@ -7,9 +7,6 @@
                 left:1%;
                
             }
-            
-           
-            
         </style>
      <script src='https://code.jquery.com/jquery-2.2.4.js' crossorigin="anonymous"></script>
      <meta charset="utf-8">
@@ -51,7 +48,7 @@
         function addMsg(message){
             $('#displayMsg').append(`<h3> ${message.name} </h3>  ${message.message} <br>`)
         }
-        $.get('https://chatpii.herokuapp.com/favicon.ico',() =>{
+      
         })
         function getMessage(){
             $.get('http://chatpii.herokuapp.com/vinay',(data)=>{
