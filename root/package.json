@@ -1,8 +1,6 @@
-"scripts": {
-    "start": "node your-script.js"
-},
+
 {
-  "name": "myprograms",
+  "name": "root",
   "version": "1.0.0",
   "description": "my app",
   "main": "api.js",
