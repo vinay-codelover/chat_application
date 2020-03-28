@@ -23,6 +23,7 @@ app.get('/vinay',(req,res)=>{
      res.send(messages);
    
 })
+app.get('/favicon.ico', (req, res) => res.status(204));
 app.post('/vinay',(req,res)=>{
      console.log(req.body);
      messages.push(req.body);
