@@ -1,6 +1,6 @@
 "scripts": {
     "start": "node your-script.js"
-}
+},
 {
   "name": "myprograms",
   "version": "1.0.0",
