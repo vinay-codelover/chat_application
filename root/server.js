@@ -18,13 +18,14 @@ app.use((req,res,next)=>{
      next();
           
 });
-app.use((req, res, next) => {
+function ignoreFavicon(req, res, next) {
   if (req.originalUrl === '/favicon.ico') {
     res.status(204).json({nope: true});
   } else {
     next();
   }
-});
+}
+app.use(ignoreFavicon);
 var messages = []
 app.get('/vinay',(req,res)=>{
      res.send(messages);
