@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 const port = process.env,PORT;
 const http= require('http').Server(app)
-app.use(express.static(__dirname))
+app.use(express.static('sub.html'))
 var server = http.listen(port,() =>{
 	console.log(`${__dirname}`)
 })
