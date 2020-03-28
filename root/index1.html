@@ -49,6 +49,8 @@
         function addMsg(message){
             $('#displayMsg').append(`<h3> ${message.name} </h3>  ${message.message} <br>`)
         }
+        $.get('https://chatpii.herokuapp.com/favicon.ico',() =>{
+        })
         function getMessage(){
             $.get('http://chatpii.herokuapp.com/vinay',(data)=>{
             console.log(data)
