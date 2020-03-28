@@ -2,10 +2,8 @@ var express = require('express')
 var app = express()
 const port = process.env.PORT;
 const http= require('http').Server(app)
-app.use(express.static('public'))
-var server = http.listen(3000,() =>{
-	console.log(`${__dirname}`)
-})
+app.use(express.static(__dirname))
+var server = http.listen(port)
 var io = require('socket.io')(http)
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended:false}))
