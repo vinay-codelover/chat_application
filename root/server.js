@@ -36,11 +36,8 @@ app.post('/vinay',(req,res)=>{
 io.on('connection',(socket)=>{
      console.log('user connected');
 })
-io.on('disconnect',(socket)=>{
-     socket.disconnect(true)
-     server.close(()=>{
-          console.log('disconnected to the server');
-     })
-})
+socket.on('forceDisconnect', function(){
+    socket.disconnect();
+});
 
 
