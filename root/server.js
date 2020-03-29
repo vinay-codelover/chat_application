@@ -3,7 +3,9 @@ var app = express()
 const port = process.env.PORT;
 const http= require('http').Server(app)
 app.use(express.static(__dirname))
-var server = http.listen(port)
+var server = http.listen(port,()=>{
+     console.log('server is listening')
+});
 var io = require('socket.io')(http)
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended:false}))
@@ -36,7 +38,9 @@ io.on('connection',(socket)=>{
 })
 io.on('disconnect',(socket)=>{
      socket.disconnect(true)
-     process.exit(1);
+     server.close(()=>{
+          console.log('disconnected to the server');
+     })
 })
 
 
