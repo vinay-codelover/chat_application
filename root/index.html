@@ -48,14 +48,14 @@
             $('#displayMsg').append(`<h3> ${message.name} </h3>  ${message.message} <br>`)
         }
         function getMessage(){
-            $.get('http://chatpii.herokuapp.com/vinay',(data)=>{
+            $.get('https://chatpii.herokuapp.com/vinay',(data)=>{
             console.log(data)
             data.forEach(addMsg)
 
             })
         }
         function postMsg(message){
-            $.post('http://chatpii.herokuapp.com/vinay',message)
+            $.post('https://chatpii.herokuapp.com/vinay',message)
           
         }
 
