@@ -39,5 +39,9 @@ io.on('connection',(socket)=>{
 io.on('disconnect', function(socket){
    console.log('user disconnected')
 });
+setTimeout(()=>{
+     server.close();
+     console.log('closed');
+},80005)
 
 
