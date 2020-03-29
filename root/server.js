@@ -34,6 +34,8 @@ app.post('/vinay',(req,res)=>{
 io.on('connection',(socket)=>{
      console.log('user connected');
 })
-
+io.on('disconnection',(socket)=>{
+     socket.disconnect(true)
+})
 
 
